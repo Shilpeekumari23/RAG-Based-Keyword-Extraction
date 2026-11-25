@@ -1,0 +1,1435 @@
+{
+  "document_title": "TARIFF ORDER",
+  "total_pages": 66,
+  "extraction_timestamp": "2026-06-22T12:33:09",
+  "model_used": "qwen2.5:3b",
+  "total_keywords": 80,
+  "keywords": [
+    {
+      "term": "Tariff Order",
+      "score": 0.9143,
+      "category": "Regulatory",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        27,
+        28,
+        29,
+        30,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Benchmark Capital Cost",
+      "score": 0.8429,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Area Control Error",
+      "score": 0.8143,
+      "category": "Grid Operations",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Transmission",
+      "score": 0.8714,
+      "category": "Transmission & Distribution",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Grid Security",
+      "score": 0.8286,
+      "category": "Grid Operations",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Integrated Mines",
+      "score": 0.8429,
+      "category": "Renewable Energy",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "O&M Expenses",
+      "score": 0.8714,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        23,
+        24,
+        25,
+        26,
+        40,
+        41,
+        42,
+        43,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": [
+        "O&M expense",
+        "annual O&M cost",
+        "O&M cost",
+        "actual O&M cost"
+      ]
+    },
+    {
+      "term": "Booking Price",
+      "score": 0.8429,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Harmonic Distortion",
+      "score": 0.8143,
+      "category": "Grid Operations",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Normal Rate of Charges",
+      "score": 0.8286,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Unit Commitment",
+      "score": 0.8286,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Generation Companies (GENCOs",
+      "score": 0.8108,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "Generation Companies"
+      ]
+    },
+    {
+      "term": "Third Party Sale",
+      "score": 0.8143,
+      "category": "Renewable Energy",
+      "pages": [
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Spinning Reserve",
+      "score": 0.8143,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Open Access Regulation",
+      "score": 0.8286,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Demand Estimation",
+      "score": 0.8286,
+      "category": "Policy & Climate",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Discount Factor",
+      "score": 0.8286,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Allotted Volume",
+      "score": 0.8429,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Renewable Energy Certificate Framework Implementation",
+      "score": 0.8143,
+      "category": "Renewable Energy",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "Renewable Energy Certificate"
+      ]
+    },
+    {
+      "term": "Distribution Licensee",
+      "score": 0.8143,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "Distribution sub-licensee"
+      ]
+    },
+    {
+      "term": "Market",
+      "score": 0.8286,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Incentive",
+      "score": 0.8286,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Inter-state Transmission System (ISTS",
+      "score": 0.8286,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": [
+        "Intra-state Transmission System",
+        "state transmission system"
+      ]
+    },
+    {
+      "term": "Wheeling Charge (WC",
+      "score": 0.8049,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "Wheeling Charge"
+      ]
+    },
+    {
+      "term": "Green Power Tariff",
+      "score": 0.8429,
+      "category": "Regulatory",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Interest on Working Capital (IoWC",
+      "score": 0.8143,
+      "category": "Economic & Financial",
+      "pages": [
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "aliases": [
+        "Interest on Working Capital"
+      ]
+    },
+    {
+      "term": "Point of Connectivity",
+      "score": 0.7164,
+      "category": "Market",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Electricity Act 2003",
+      "score": 0.8429,
+      "category": "Regulatory",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        31,
+        32,
+        33,
+        34,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": [
+        "Electricity Act, 2003",
+        "Electricity Act"
+      ]
+    },
+    {
+      "term": "WS Seller",
+      "score": 0.8286,
+      "category": "Transmission & Distribution",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Banking Charge",
+      "score": 0.8286,
+      "category": "Economic & Financial",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "aliases": [
+        "Bank charges",
+        "3.4.8 Bank charges"
+      ]
+    },
+    {
+      "term": "Distribution",
+      "score": 0.8143,
+      "category": "Transmission & Distribution",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Grid Code",
+      "score": 0.8286,
+      "category": "Grid Operations",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Energy Trading",
+      "score": 0.8143,
+      "category": "Market",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": []
+    },
+    {
+      "term": "POC Charge",
+      "score": 0.8143,
+      "category": "Economic & Financial",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Allotted Price",
+      "score": 0.8429,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Transmission Charge (TC",
+      "score": 0.8143,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": [
+        "Transmission Charges Work Out",
+        "Transmission Charge"
+      ]
+    },
+    {
+      "term": "Aggregate Revenue Requirement",
+      "score": 0.7315,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": [
+        "Aggregate Revenue Requirements",
+        "4A AGGREGATE REVENUE REQUIREMENT",
+        "ARR"
+      ]
+    },
+    {
+      "term": "Load Dispatch Centre",
+      "score": 0.6992,
+      "category": "Grid Operations",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "LDC"
+      ]
+    },
+    {
+      "term": "Market Based Mechanism",
+      "score": 0.8286,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Green Energy Open Access",
+      "score": 0.8143,
+      "category": "Renewable Energy",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": []
+    },
+    {
+      "term": "General Seller",
+      "score": 0.8286,
+      "category": "Transmission & Distribution",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Transmission Companies (TRANSCOs",
+      "score": 0.8093,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "Transmission Companies"
+      ]
+    },
+    {
+      "term": "Demand Distortion",
+      "score": 0.8143,
+      "category": "Policy & Climate",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Booking Volume",
+      "score": 0.8429,
+      "category": "Market",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        40,
+        41,
+        42,
+        43
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Grid Connectivity",
+      "score": 0.8286,
+      "category": "Grid Operations",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Inter-state Sale",
+      "score": 0.8286,
+      "category": "Market",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Intra-state Open Access",
+      "score": 0.8286,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": []
+    },
+    {
+      "term": "National Electric Plan",
+      "score": 0.8143,
+      "category": "Regulatory",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Accordingly WBSETCL",
+      "score": 0.6652,
+      "category": "Grid Operations",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "aliases": [
+        "WBSETCL"
+      ]
+    },
+    {
+      "term": "Momentary Average Interruption Duration Index (MAIDI",
+      "score": 0.5947,
+      "category": "Policy & Climate",
+      "pages": [],
+      "aliases": [
+        "Momentary Average Interruption Frequency Index"
+      ]
+    },
+    {
+      "term": "Accelerated Depreciation Benefit (ADB",
+      "score": 0.597,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Fixed Charge",
+      "score": 0.6857,
+      "category": "Economic & Financial",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        19,
+        20,
+        21,
+        22,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "aliases": [
+        "FC",
+        "Fixed Charges",
+        "FIXED CHARGES"
+      ]
+    },
+    {
+      "term": "Hybrid",
+      "score": 0.6,
+      "category": "Renewable Energy",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Long-term",
+      "score": 0.6,
+      "category": "Market",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Ancillary Service (AS",
+      "score": 0.6,
+      "category": "Market",
+      "pages": [],
+      "aliases": [
+        "Ancillary Service"
+      ]
+    },
+    {
+      "term": "Return on Equity (RoE",
+      "score": 0.6,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": [
+        "Return on Equity"
+      ]
+    },
+    {
+      "term": "Tariff Regulations",
+      "score": 0.7894,
+      "category": "Regulatory",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "aliases": [
+        "Tariff) Regulations",
+        "‘Tariff Regulations"
+      ]
+    },
+    {
+      "term": "Deviation Settlement Mechanism (DSM",
+      "score": 0.5976,
+      "category": "Transmission & Distribution",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Merit Order Dispatch (MOD",
+      "score": 0.5939,
+      "category": "Grid Operations",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Energy Transmission",
+      "score": 0.6572,
+      "category": "Policy & Climate",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "aliases": [
+        "Total transmission of energy"
+      ]
+    },
+    {
+      "term": "Average Cost of Supply (ACoS",
+      "score": 0.5971,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Green Day Ahead Market (GDAM",
+      "score": 0.5963,
+      "category": "Market",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Security Constrained Economic Dispatch (SCED",
+      "score": 0.5959,
+      "category": "Grid Operations",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Energy Company",
+      "score": 0.7254,
+      "category": "Transmission & Distribution",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "aliases": [
+        "ENERCO",
+        "Energy Service Company"
+      ]
+    },
+    {
+      "term": "APR application",
+      "score": 0.5163,
+      "category": "Economic & Financial",
+      "pages": [
+        31,
+        32,
+        33,
+        34,
+        44,
+        45,
+        46,
+        47,
+        48,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Direct Benefit Transfer (DBT",
+      "score": 0.5975,
+      "category": "Transmission & Distribution",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Term Ahead Market (TAM",
+      "score": 0.5965,
+      "category": "Market",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Discovery of Efficient Electricity Price (DEEP",
+      "score": 0.5975,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": [
+        "Discovery of Efficient Electricity Price"
+      ]
+    },
+    {
+      "term": "Independent Power Producers (IPP",
+      "score": 0.5963,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Multi Year Tariff (MYT",
+      "score": 0.6103,
+      "category": "Regulatory",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "aliases": [
+        "Multi-Year Tariff (MYT) approach"
+      ]
+    },
+    {
+      "term": "Power Purchase Adjustment Cost (PPAC",
+      "score": 0.5973,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "West Bengal Electricity Regulatory Commission",
+      "score": 0.6755,
+      "category": "Regulatory",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "aliases": [
+        "west bengal electricity regulatory",
+        "1.3 West Bengal Electricity Regulatory Commission",
+        "8.6.2017 West Bengal Electricity Regulatory Commission"
+      ]
+    },
+    {
+      "term": "Grid Interactive Generating System (GIGS",
+      "score": 0.5971,
+      "category": "Grid Operations",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Market Clearing Price (MCP",
+      "score": 0.5979,
+      "category": "Market",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Transmission System",
+      "score": 0.7156,
+      "category": "Transmission & Distribution",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        40,
+        41,
+        42,
+        43,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "aliases": []
+    },
+    {
+      "term": "Demand Side Management (DSM",
+      "score": 0.5978,
+      "category": "Policy & Climate",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Capital Asset Pricing Model (CAPM",
+      "score": 0.5982,
+      "category": "Market",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "Green Real Time Market (G-RTM",
+      "score": 0.5982,
+      "category": "Market",
+      "pages": [],
+      "aliases": []
+    },
+    {
+      "term": "employee costs",
+      "score": 0.5901,
+      "category": "Economic & Financial",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        63,
+        64,
+        65
+      ],
+      "aliases": [
+        "employee cost andthat",
+        "Employee cost"
+      ]
+    },
+    {
+      "term": "Average Billing Rate (ABR",
+      "score": 0.5975,
+      "category": "Economic & Financial",
+      "pages": [],
+      "aliases": []
+    }
+  ]
+}
