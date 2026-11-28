@@ -1,10 +1,45 @@
-# RAG-Based Keyword Extraction
+# RAG-Based Keyword Extraction for Indian Power-Sector PDFs
 
-Extract ranked technical terms from Indian power-sector PDFs and trace them back to the pages where the pipeline found supporting text. The included [tariff order example](keywords_output.json) contains 80 keywords from a 66-page document. Its first result is **Tariff Order**, classified as **Regulatory** with a ranking score of **0.9143**.
+## Problem statement
 
-## Run the sample
+A tariff order can span dozens of pages and use several names for the same concept. A reader looking for technical terms needs to know which phrases matter, how they relate to the power sector, and where to find them in the document. This project turns a PDF into a ranked keyword index with categories, aliases, and page references.
 
-With Python 3 and Ollama installed, run these commands in a macOS or Linux terminal.
+## Approach
+
+The pipeline reads the PDF one passage at a time. A local language model proposes technical terms in context, while phrase extraction and a curated vocabulary supply additional candidates. The pipeline then groups related names and selects terms that cover different topics in the document.
+
+## Methodology and techniques
+
+| Step | Technique | Purpose |
+| --- | --- | --- |
+| 1. Prepare passages | Clean the extracted text and split it into chunks targeting 1,200 words with a 200-word overlap. | Preserve context across chunk boundaries and retain page ranges for review. |
+| 2. Collect candidates | Prompt Qwen with each passage and a power-sector vocabulary. Add spaCy noun phrases, KeyBERT keyphrases, and exact vocabulary matches. | Capture both established terms and phrases suggested by the document itself. |
+| 3. Filter and merge | Compare candidate embeddings with domain examples using cosine similarity. Merge acronyms with their full forms and group near-duplicates. | Keep relevant terms and consolidate different names for one concept. |
+| 4. Rank and export | Combine domain relevance with extraction signals, then apply Maximal Marginal Relevance (MMR). | Select keywords that are relevant and add variety. Export the results to JSON and Excel. |
+
+The [pipeline entry point](main.py) connects these stages. The [configuration](config.py) defines the vocabulary, chunk sizes, models, and thresholds.
+
+## Results
+
+The included run produced **80 keywords from a 66-page tariff order**. Three entries illustrate the range of topics extracted.
+
+| Extracted term | Assigned category | Ranking score |
+| --- | --- | ---: |
+| Tariff Order | Regulatory | 0.9143 |
+| Benchmark Capital Cost | Economic & Financial | 0.8429 |
+| Area Control Error | Grid Operations | 0.8143 |
+
+The scores express the pipeline’s ranking of individual terms. Page references point to the passages that produced each candidate, so a reviewer can check its context in the PDF.
+
+[View the JSON results](keywords_output.json) · [Download the Excel results](keywords_output.xlsx)
+
+## Tools and setup
+
+The project uses Python, Ollama with `qwen2.5:3b`, spaCy, KeyBERT, and Sentence Transformers with `all-mpnet-base-v2`. Excel export uses openpyxl.
+
+### 1. Install the dependencies
+
+With Python 3 and Ollama installed, run the following in a macOS or Linux terminal.
 
 ```bash
 git clone https://github.com/Shilpeekumari23/RAG-Based-Keyword-Extraction.git
@@ -15,26 +50,20 @@ python -m pip install -r requirements.txt openpyxl
 python -m spacy download en_core_web_sm
 ```
 
-Start Ollama locally. If the desktop app already runs the service, continue to the model download. Otherwise, run `ollama serve` in a separate terminal.
+### 2. Prepare the local model
+
+Open the Ollama desktop app or run `ollama serve` in a separate terminal. Then download the model.
 
 ```bash
 ollama pull qwen2.5:3b
+```
+
+The [model client](llm_extractor.py) sends each passage and the reference vocabulary to `http://localhost:11434/api/generate`. The default local setup requires no login, API key, or bearer token.
+
+### 3. Run the sample PDF
+
+```bash
 python main.py test.pdf --top-k 20 --output sample_run.json
 ```
 
-Open `sample_run.json` for the ranked terms or `sample_run.xlsx` for the spreadsheet. The example uses a distinct output name to preserve the checked-in [JSON](keywords_output.json) and [Excel](keywords_output.xlsx) results. Replace `test.pdf` with your PDF path to process another document. The default limit is 80 keywords. Use `--excel` to choose a spreadsheet path and `--verbose` for diagnostic output.
-
-## How extraction works
-
-| Stage | What the code does |
-| --- | --- |
-| Read and chunk | [PDF loading](pdf_loader.py), [preprocessing](preprocessing.py), and [chunking](chunking.py) turn the document into overlapping text passages with page ranges. |
-| Find candidate terms | The [LLM extractor](llm_extractor.py) gives Qwen each passage and a reference vocabulary. The [phrase extractor](noun_phrase_extractor.py) independently proposes terms, and [main.py](main.py) adds exact vocabulary matches from the document. |
-| Filter and merge | The [acronym merger](acronym_merger.py) links abbreviations with full forms. The [embedding ranker](embedding_ranker.py) filters candidates for domain relevance, and the [deduplicator](semantic_deduplicator.py) groups similar terms. |
-| Rank and export | The [keyword ranker](keyword_ranker.py) selects the top terms. The [output writer](output_writer.py) records scores, categories, and page references derived from chunk ranges. Use these ranges to locate the relevant passage. |
-
-## Model requests and credentials
-
-This is a command-line pipeline. When you run [main.py](main.py), the [LLM extractor](llm_extractor.py) sends a JSON POST to `http://localhost:11434/api/generate`. Each request contains the model name, a prompt with the PDF passage and target vocabulary, and generation settings. The extractor reads Ollama’s response and parses it into candidate terms.
-
-The default local run requires no application login or API key. The request sets only the `Content-Type: application/json` header and sends no bearer token or cookies. Changing `OLLAMA_BASE_URL` in [config.py](config.py) changes which server receives the document passages. The same file sets the Ollama model, embedding model, target vocabulary, and keyword limit.
+Open `sample_run.xlsx` to browse up to 20 keywords, or use `sample_run.json` for further analysis. To process your own document, replace `test.pdf` with its path. Omit `--top-k` to use the default limit of 80.
