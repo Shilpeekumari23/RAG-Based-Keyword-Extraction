@@ -19,7 +19,7 @@ flowchart TD
     Q --> M["Filter and merge terms"]
     K --> M
     V --> M
-    M --> R["Rank and categorize"]
+    M --> R["Select 30 keywords with MMR"]
     R --> O["Keyword index · JSON and Excel"]
 ```
 
@@ -30,13 +30,15 @@ flowchart TD
 | **Prepare passages** | Split clean text into chunks of about **1,200 words**, with a **200-word overlap** to preserve context near boundaries. Keep the page range for each chunk. |
 | **Extract terms** | Qwen reads each passage alongside a reference vocabulary. spaCy finds noun phrases, KeyBERT suggests keyphrases, and exact matching picks up known sector terms. |
 | **Resolve variations** | Compare term embeddings with domain examples using cosine similarity. Link acronyms to their full forms and merge similar candidates. |
-| **Select the final index** | Maximal Marginal Relevance balances a term’s relevance with how much it differs from terms already selected. Each exported entry includes its category and available page references. |
+| **Select the final index** | Maximal Marginal Relevance (MMR) selects the final 30 keywords one at a time. Each selection balances domain relevance with how much new information the term adds to the list. Each exported entry includes its category and available page references. |
 
 [Explore the pipeline](main.py) · [View vocabulary and thresholds](config.py)
 
 ## Results
 
-> **66 pages → 80 keywords** in the included tariff order. The table shows three entries from the saved output.
+> **Final output: 30 MMR-ranked keywords** from the 66-page tariff order.
+
+The repository also includes an 80-keyword sample export. Three entries from that file are shown below.
 
 | Keyword | Category | Ranking score |
 | --- | --- | ---: |
@@ -78,7 +80,7 @@ The [model client](llm_extractor.py) sends each passage and the reference vocabu
 ### 3. Run the sample PDF
 
 ```bash
-python main.py test.pdf --top-k 20 --output sample_run.json
+python main.py test.pdf --top-k 30 --output sample_run.json
 ```
 
-Open `sample_run.xlsx` to browse up to 20 keywords, or use `sample_run.json` for further analysis. To process your own document, replace `test.pdf` with its path. Omit `--top-k` to use the default limit of 80.
+Open `sample_run.xlsx` to browse up to 30 keywords, or use `sample_run.json` for further analysis. To process your own document, replace `test.pdf` with its path. Omit `--top-k` to use the default limit of 80.
