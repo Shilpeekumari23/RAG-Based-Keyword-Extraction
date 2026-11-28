@@ -1,37 +1,52 @@
-# RAG-Based Keyword Extraction for Indian Power-Sector PDFs
+<h1 align="center">RAG-Based Keyword Extraction</h1>
+<p align="center">A searchable keyword index for Indian power-sector PDFs</p>
+<p align="center"><a href="#approach">Workflow</a> · <a href="#results">Sample results</a> · <a href="#tools-and-setup">Run locally</a></p>
 
 ## Problem statement
 
-A tariff order can span dozens of pages and use several names for the same concept. A reader looking for technical terms needs to know which phrases matter, how they relate to the power sector, and where to find them in the document. This project turns a PDF into a ranked keyword index with categories, aliases, and page references.
+Which pages of a tariff order discuss *benchmark capital cost*? A reader may have to search a long PDF for the full term, its acronym, and variations in wording. This project builds an index that brings those terms together, groups them by topic, and points readers back to the relevant pages.
 
 ## Approach
 
-The pipeline reads the PDF one passage at a time. A local language model proposes technical terms in context, while phrase extraction and a curated vocabulary supply additional candidates. The pipeline then groups related names and selects terms that cover different topics in the document.
+Each passage feeds three extraction methods. Their candidates come together before ranking, so a phrase can enter the index through its context, its wording, or a match with the power-sector vocabulary.
+
+```mermaid
+flowchart TD
+    P["PDF passages with page ranges"]
+    P --> Q["Qwen in Ollama"]
+    P --> K["spaCy and KeyBERT"]
+    P --> V["Vocabulary matches"]
+    Q --> M["Filter and merge terms"]
+    K --> M
+    V --> M
+    M --> R["Rank and categorize"]
+    R --> O["Keyword index · JSON and Excel"]
+```
 
 ## Methodology and techniques
 
-| Step | Technique | Purpose |
-| --- | --- | --- |
-| 1. Prepare passages | Clean the extracted text and split it into chunks targeting 1,200 words with a 200-word overlap. | Preserve context across chunk boundaries and retain page ranges for review. |
-| 2. Collect candidates | Prompt Qwen with each passage and a power-sector vocabulary. Add spaCy noun phrases, KeyBERT keyphrases, and exact vocabulary matches. | Capture both established terms and phrases suggested by the document itself. |
-| 3. Filter and merge | Compare candidate embeddings with domain examples using cosine similarity. Merge acronyms with their full forms and group near-duplicates. | Keep relevant terms and consolidate different names for one concept. |
-| 4. Rank and export | Combine domain relevance with extraction signals, then apply Maximal Marginal Relevance (MMR). | Select keywords that are relevant and add variety. Export the results to JSON and Excel. |
+| Stage | How it works |
+| --- | --- |
+| **Prepare passages** | Split clean text into chunks of about **1,200 words**, with a **200-word overlap** to preserve context near boundaries. Keep the page range for each chunk. |
+| **Extract terms** | Qwen reads each passage alongside a reference vocabulary. spaCy finds noun phrases, KeyBERT suggests keyphrases, and exact matching picks up known sector terms. |
+| **Resolve variations** | Compare term embeddings with domain examples using cosine similarity. Link acronyms to their full forms and merge similar candidates. |
+| **Select the final index** | Maximal Marginal Relevance balances a term’s relevance with how much it differs from terms already selected. Each exported entry includes its category and available page references. |
 
-The [pipeline entry point](main.py) connects these stages. The [configuration](config.py) defines the vocabulary, chunk sizes, models, and thresholds.
+[Explore the pipeline](main.py) · [View vocabulary and thresholds](config.py)
 
 ## Results
 
-The included run produced **80 keywords from a 66-page tariff order**. Three entries illustrate the range of topics extracted.
+> **66 pages → 80 keywords** in the included tariff order. The table shows three entries from the saved output.
 
-| Extracted term | Assigned category | Ranking score |
+| Keyword | Category | Ranking score |
 | --- | --- | ---: |
-| Tariff Order | Regulatory | 0.9143 |
-| Benchmark Capital Cost | Economic & Financial | 0.8429 |
-| Area Control Error | Grid Operations | 0.8143 |
+| **Tariff Order** | Regulatory | 0.9143 |
+| **Benchmark Capital Cost** | Economic & Financial | 0.8429 |
+| **Area Control Error** | Grid Operations | 0.8143 |
 
-The scores express the pipeline’s ranking of individual terms. Page references point to the passages that produced each candidate, so a reviewer can check its context in the PDF.
+Open the spreadsheet to browse terms and page references, or use the JSON for analysis.
 
-[View the JSON results](keywords_output.json) · [Download the Excel results](keywords_output.xlsx)
+[Browse the Excel index](keywords_output.xlsx) · [Explore the JSON](keywords_output.json) · [Read the sample PDF](test.pdf)
 
 ## Tools and setup
 
